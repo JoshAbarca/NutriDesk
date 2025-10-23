@@ -1,0 +1,189 @@
+/* --- ACERCA DE (NutriDex) --- */
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #F2F2F2;
+  color: #0D0D0D;
+  line-height: 1.6;
+}
+
+
+/* --- HEADER --- */
+header {
+  background-color: #1F732C;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.logo img {
+  width: 140px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: #F2F2F2;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #60A62E;
+  color: #fff;
+}
+
+.busqueda {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.busqueda input {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #60A62E;
+  outline: none;
+  font-size: 0.95rem;
+  width: 180px;
+  transition: border-color 0.3s;
+}
+
+.busqueda input:focus {
+  border-color: #A4D96C;
+}
+
+.busqueda button {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #60A62E;
+  background-color: #60A62E;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.busqueda button:hover {
+  background-color: #A4D96C;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+.acerca {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  border: 2px solid #60A62E;
+  text-align: center;
+}
+
+.acerca h1 {
+  font-size: 2.2rem;
+  color: #1F732C;
+  margin-bottom: 25px;
+}
+
+/* Contenedor de autores (dos cuadritos lado a lado) */
+.contenedor-autores {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Tarjeta del autor */
+.tarjeta-autor {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  width: 45%;
+  min-width: 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Foto circular */
+.foto-autor {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #438C2E;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Información del autor */
+.info-autor {
+  text-align: left;
+}
+
+.info-autor p {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+/* Responsividad: apilar en móviles */
+@media (max-width: 768px) {
+  .contenedor-autores {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tarjeta-autor {
+    width: 100%;
+  }
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: #1F732C;
+  color: #F2F2F2;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer .redes {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+footer .icono-redes {
+  width: 35px;
+  transition: transform 0.3s;
+}
+
+footer .icono-redes:hover {
+  transform: scale(1.1);
+}

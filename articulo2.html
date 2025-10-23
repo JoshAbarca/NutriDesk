@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial: Cómo armar tu almuerzo balanceado - NutriDesk</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/articulo1.css"> <!-- O reutiliza css/articulo1.css -->
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo NutriDesk">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contactos.html">Contacto</a></li>
+          <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+          <li><a href="acercade.html">Acerca de</a></li>
+        </ul>
+      </nav>
+      <div class="busqueda">
+        <input type="text" placeholder="Buscar productos...">
+        <button onclick="alert('Buscando...')">🔍</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="contenedor-articulo">
+    <div class="container">
+      <article class="articulo">
+        <h1>Tutorial: Cómo armar tu almuerzo balanceado</h1>
+        <img src="Img/Comida.jpg" alt="Almuerzo balanceado preparado" class="imagen-principal">
+        
+        <p>En este tutorial, aprenderás a armar un <strong>almuerzo balanceado</strong> que incluya carbohidratos, proteínas, verduras y grasas saludables. Ideal para mantener la energía durante la tarde y promover una alimentación equilibrada.</p>
+        
+        <h2 id="ingredientes">Ingredientes Necesarios</h2>
+        <ul>
+          <li>1 taza de arroz integral o quinoa cocida</li>
+          <li>100g de pollo, pescado o lentejas (proteína)</li>
+          <li>1 taza de verduras mixtas (brócoli, zanahorias, espinacas)</li>
+          <li>1/2 aguacate en rodajas</li>
+          <li>Un chorrito de aceite de oliva y limón para aderezar</li>
+        </ul>
+        
+        <h2 id="pasos">Pasos para Preparar</h2>
+        <ol>
+          <li><em>Cocina el grano base</em> (arroz o quinoa) según las instrucciones del paquete.</li>
+          <li>Prepara la proteína: asa el pollo o pescado, o cuece las lentejas.</li>
+          <li>Corta y saltea las verduras al vapor o en sartén con un poco de aceite.</li>
+          <li>Arma el plato: coloca el grano en el centro, añade la proteína y verduras alrededor.</li>
+          <li>Termina con el aguacate y aderezo para un toque fresco.</li>
+        </ol>
+        
+        <img src="Img/Ingredientes.webp" alt="Ingredientes para almuerzo balanceado" class="imagen-secundaria">
+        
+        <h2 id="beneficios">Beneficios Nutricionales</h2>
+        <p>Un almuerzo balanceado proporciona <u>energía sostenida</u>, mejora la concentración y apoya la salud general. Combina macronutrientes para evitar picos de azúcar.</p>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Ingrediente</th>
+              <th>Beneficio Principal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Arroz integral</td>
+              <td>Fibra y carbohidratos complejos</td>
+            </tr>
+            <tr>
+              <td>Proteína (pollo/lentejas)</td>
+              <td>Reparación muscular y saciedad</td>
+            </tr>
+            <tr>
+              <td>Verduras</td>
+              <td>Vitaminas y minerales</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h2>Consejos Finales</h2>
+        <p>Prepara porciones extras para llevar al trabajo. Ajusta las proteínas según tus preferencias (vegano, carnívoro) y varía las verduras para mantenerlo interesante.</p>
+      </article>
+      
+      <!-- BARRA LATERAL -->
+      <aside class="barra-lateral">
+        <h3>Etiquetas</h3>
+        <ul>
+          <li><a href="#ingredientes">Ingredientes</a></li>
+          <li><a href="#pasos">Pasos</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+        </ul>
+        <h3>Búsqueda</h3>
+        <input type="text" id="busqueda-articulo" placeholder="Buscar en el artículo..."
+      </aside>
+    </div>
+  </main>
+
+  <!-- SECCIÓN DE COMENTARIOS -->
+  <section class="comentarios">
+    <div class="container">
+      <h2>Comentarios</h2>
+      
+      <div class="comentario">
+        <p><strong>Maria López:</strong> ¡Excelente guía! Mi almuerzo ahora es mucho más saludable.</p>
+        <small>Publicado el 25 de octubre de 2023</small>
+      </div>
+      
+      <form class="formulario-comentario">
+        <h3>Deja tu comentario</h3>
+        <input type="text" placeholder="Nombre" required>
+        <textarea placeholder="Escribe tu comentario..." required></textarea>
+        <button type="submit" onclick="alert('¡Gracias por tu comentario! Se ha enviado correctamente.'); this.form.reset();">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 NutriDesk. Todos los derechos reservados.</p>
+      <div class="redes">
+        <a href="https://wa.me/506XXXXXXXX" target="_blank">
+          <img src="img/whatsapp.png" alt="WhatsApp" class="icono-redes">
+        </a>
+        <a href="https://instagram.com/nutridex" target="_blank">
+          <img src="img/instagram.png" alt="Instagram" class="icono-redes">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>

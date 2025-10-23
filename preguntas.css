@@ -1,0 +1,297 @@
+/* --- PREGUNTAS FRECUENTES (NutriDesk) --- */
+
+/* Reset básico: Elimina márgenes y paddings por defecto, establece box-sizing para incluir bordes en el ancho, y fuente consistente */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* Fuente consistente */
+}
+
+/* Body: Fondo con gradiente sutil para atractivo visual, color de texto oscuro, y altura de línea para legibilidad */
+body {
+  background: linear-gradient(135deg, #F2F2F2 0%, #E8F5E8 100%); /* Gradiente sutil para atractivo */
+  color: #0D0D0D;
+  line-height: 1.6;
+}
+
+/* --- HEADER --- */
+/* Header: Fondo verde, padding vertical, sombra para profundidad */
+header {
+  background-color: #1F732C;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor del header: Ancho responsivo, centrado, flexbox para alinear elementos */
+.header-container {
+  width: 85%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* Logo: Tamaño fijo */
+.logo img {
+  width: 140px;
+}
+
+/* Navegación: Lista horizontal, sin viñetas, con gap y flex-wrap para móviles */
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+/* Enlaces de nav: Color blanco, sin decoración, padding, border-radius, transición para hover */
+nav ul li a {
+  color: #F2F2F2;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover en nav: Cambia fondo a verde claro */
+nav ul li a:hover {
+  background-color: #60A62E;
+  color: #fff;
+}
+
+/* Barra de búsqueda: Flexbox para alinear input y botón */
+.busqueda {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Input de búsqueda: Padding, border-radius, borde verde, sin outline, ancho fijo, transición en foco */
+.busqueda input {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #60A62E;
+  outline: none;
+  font-size: 0.95rem;
+  width: 180px;
+  transition: border-color 0.3s;
+}
+
+/* Foco en input: Cambia borde a verde más claro */
+.busqueda input:focus {
+  border-color: #A4D96C;
+}
+
+/* Botón de búsqueda: Padding, border-radius, borde y fondo verde, color blanco, cursor pointer, transición */
+.busqueda button {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #60A62E;
+  background-color: #60A62E;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover en botón: Cambia fondo a verde más claro */
+.busqueda button:hover {
+  background-color: #A4D96C;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+/* Contenedor principal: Ancho máximo, centrado, padding, fondo blanco, border-radius, borde verde, sombra */
+.acerca {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  border: 3px solid #60A62E;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* Título h1: Tamaño grande, color verde, margen inferior, sombra de texto */
+.acerca h1 {
+  font-size: 2.5rem;
+  color: #1F732C;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Párrafo intro: Tamaño mediano, color gris, margen inferior */
+.acerca p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Sección FAQ: Alineación a la izquierda */
+.faq {
+  text-align: left;
+}
+
+/* Details en FAQ: Margen inferior, borde verde, border-radius, fondo gris claro, transición en sombra */
+.faq details {
+  margin-bottom: 20px;
+  border: 2px solid #60A62E;
+  border-radius: 10px;
+  background: #f9f9f9;
+  transition: box-shadow 0.3s;
+}
+
+/* Hover en details: Aumenta sombra */
+.faq details:hover {
+  box-shadow: 0 2px 10px rgba(96, 166, 46, 0.3);
+}
+
+/* Summary: Padding, cursor pointer, negrita, tamaño, color verde, sin lista, flexbox, transición */
+.faq summary {
+  padding: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #1F732C;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+/* Oculta marcador por defecto */
+.faq summary::marker {
+  display: none;
+}
+
+/* Icono + después del summary: Contenido ➕, tamaño, margen izquierdo, transición */
+.faq summary::after {
+  content: " ➕";
+  font-size: 1.5rem;
+  margin-left: auto;
+  transition: transform 0.3s;
+}
+
+/* Cuando está abierto: Cambia a ➖ y rota */
+.faq details[open] summary::after {
+  content: " ➖";
+  transform: rotate(180deg);
+}
+
+/* Hover en summary: Cambia fondo */
+.faq summary:hover {
+  background: #e8f5e8;
+}
+
+/* Respuesta: Padding, borde superior, fondo blanco */
+.faq .respuesta {
+  padding: 20px;
+  border-top: 2px solid #60A62E;
+  background: #fff;
+}
+
+/* h4 en respuesta: Color verde, márgenes */
+.faq .respuesta h4 {
+  color: #438C2E;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+/* Párrafos en respuesta: Margen inferior */
+.faq .respuesta p {
+  margin-bottom: 10px;
+}
+
+/* Listas en respuesta: Margen izquierdo e inferior */
+.faq .respuesta ul, .faq .respuesta ol {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+/* Items de lista: Margen inferior */
+.faq .respuesta li {
+  margin-bottom: 5px;
+}
+
+/* Enlaces en respuesta: Color verde, subrayado, negrita, transición */
+.faq .respuesta a {
+  color: #1F732C;
+  text-decoration: underline;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+/* Hover en enlaces: Cambia color */
+.faq .respuesta a:hover {
+  color: #438C2E;
+}
+
+/* --- FOOTER --- */
+/* Footer: Fondo verde, color blanco, centrado, padding, sombra */
+footer {
+  background-color: #1F732C;
+  color: #F2F2F2;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+/* Redes en footer: Margen superior, flexbox centrado, gap */
+footer .redes {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Iconos de redes: Ancho, transición en transform y filter */
+footer .icono-redes {
+  width: 40px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+/* Hover en iconos: Escala y brillo */
+footer .icono-redes:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Responsividad: Para pantallas menores a 768px */
+@media (max-width: 768px) {
+  /* Header en columna */
+  .header-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+  /* Acerca con menos padding y margen */
+  .acerca {
+    padding: 20px;
+    margin: 20px auto;
+  }
+  /* h1 más pequeño */
+  .acerca h1 {
+    font-size: 2rem;
+  }
+  /* Input de búsqueda más pequeño */
+  .busqueda input {
+    width: 150px;
+  }
+  /* Summary más pequeño */
+  .faq summary {
+    font-size: 1rem;
+    padding: 15px;
+  }
+  /* Respuesta con menos padding */
+  .faq .respuesta {
+    padding: 15px;
+  }
+}

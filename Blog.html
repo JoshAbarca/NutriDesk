@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriDesk - Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Css/blog.css">
+</head>
+<body>
+
+   <!-- HEADER CON LOGO Y MENÚ -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo NutriDesk">
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="Blog.html" class="active">Blog</a></li>
+          <li><a href="Contactos.html">Contacto</a></li>
+          <li><a href="Preguntas.html">Preguntas Frecuentes</a></li>
+          <li><a href="AcercaDe.html">Acerca de</a></li>
+        </ul>
+      </nav>
+
+      <!-- BARRA DE BÚSQUEDA -->
+      <div class="busqueda">
+        <input type="text" placeholder="Buscar productos...">
+        <button onclick="alert('Buscando...')">🔍</button>
+      </div>
+    </div>
+  </header>
+    
+  <!-- CONTENIDO PRINCIPAL (Full-Width, Sin Sidebar) -->
+  <main class="contenedor-blog">
+    <div class="container">
+      <!-- SECCIÓN DE ARTÍCULOS (con ID para acceso rápido) -->
+      <section id="articulos" class="articulos">
+        <h1>Blog NutriDesk</h1>
+        <p>Explora nuestras historias, consejos y tutoriales sobre nutrición, bienestar y estilo de vida saludable. Organizado por categorías para facilitar tu navegación.</p>
+
+        <!-- Categoría 1: Tutoriales (sin descripción) -->
+        <div id="tutoriales" class="categoria">
+          <h2>Categoría: Tutoriales</h2>
+          <div class="grid-articulos">
+            <article class="tarjeta">
+              <img src="Img/Bowl Frutas.webp" alt="Bowl saludable">
+              <h3>Tutorial: Cómo preparar un bowl saludable</h3>
+              <p>Aprende a combinar frutas y proteínas para un desayuno energizante y equilibrado</p>
+              <a href="articulo1.html">Leer más →</a>
+            </article>
+
+            <article class="tarjeta">
+              <img src="Img/Lunch2.jpeg" alt="Almuerzo balanceado">
+              <h3>Tutorial: Cómo armar tu almuerzo balanceado</h3>
+              <p>Descubre recetas simples con quinoa y vegetales para comidas saciantes y nutritivas</p>
+              <a href="articulo2.html">Leer más →</a>
+            </article>
+          </div>
+        </div>
+
+        <!-- Categoría 2: Consejos y Trucos (sin descripción) -->
+        <div id="consejos" class="categoria">
+          <h2>Categoría: Consejos y Trucos</h2>
+          <div class="grid-articulos">
+            <article class="tarjeta">
+              <img src="Img/Barras.jpeg" alt="Snacks saludables">
+              <h3>Consejos para elegir tu snack ideal</h3>
+              <p>Elige nueces o frutas para controlar el hambre sin picos de azúcar</p>
+              <a href="articulo2.html">Leer más →</a>
+            </article>
+
+            <article class="tarjeta">
+              <img src="Img/Hidratacion.jpg" alt="Hidratación">
+              <h3>Consejos para hidratarte correctamente</h3>
+              <p>Descubre trucos simples para hidratarte mejor y mejorar tu concentración diaria</p>
+              <a href="articulo4.html">Leer más →</a>
+            </article>
+          </div>
+        </div>
+
+        <!-- Categoría 3: Opiniones (sin descripción) -->
+        <div id="opiniones" class="categoria">
+          <h2>Categoría: Opiniones</h2>
+          <div class="grid-articulos">
+            <article class="tarjeta">
+              <img src="Img/Plan.jpg" alt="Plan nutricional">
+              <h3>Opinión: ¿Vale la pena un plan nutricional?</h3>
+              <p>Un plan personalizado transforma tu salud con resultados sostenibles y energía constante</p>
+              <a href="articulo5.html">Leer más →</a>
+            </article>
+
+            <article class="tarjeta">
+              <img src="Img/Frecuencia.webp" alt="Frecuencia de comidas">
+              <h3>Opinión: ¿Es mejor comer 3 veces o 5 al día?</h3>
+              <p>Prueba 3 o 5 comidas según tu rutina para controlar antojos sin obsesión</p>
+              <a href="articulo6.html">Leer más →</a>
+            </article>
+          </div>
+        </div>
+
+        <!-- Categoría 4: Historias (sin descripción) -->
+        <div id="historias" class="categoria">
+          <h2>Categoría: Historias</h2>
+          <div class="grid-articulos">
+            <article class="tarjeta">
+              <img src="Img/Historia.avif" alt="Historia de NutriDesk">
+              <h3>Historia de NutriDesk</h3>
+              <p>Desde una cocina familiar hasta ayudar a miles con hábitos saludables transformadores</p>
+              <a href="articulo7.html">Leer más →</a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- CUADRITO FIJO PARA ACCESO RÁPIDO A TEMÁTICAS (Right-Side, Más Grande, Movimiento via JS) -->
+  <aside id="toc-fija" class="toc-fija">
+    <h4>Ir a Temática</h4>
+    <ul>
+      <li><a href="#tutoriales">Tutoriales</a></li>
+      <li><a href="#consejos">Consejos y Trucos</a></li>
+      <li><a href="#opiniones">Opiniones</a></li>
+      <li><a href="#historias">Historias</a></li>
+    </ul>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 NutriDex. Todos los derechos reservados.</p>
+      <div class="redes">
+        <a href="https://wa.me/506XXXXXXXX" target="_blank">
+          <img src="img/whatsapp.png" alt="WhatsApp" class="icono-redes">
+        </a>
+        <a href="https://instagram.com/nutridex" target="_blank">
+          <img src="img/instagram.png" alt="Instagram" class="icono-redes">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LINK AL ARCHIVO JS EXTERNO -->
+  <script src="js/blog.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Opinión: ¿Es mejor comer 3 veces o 5 al día? - NutriDesk</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/articulo1.css"> <!-- O reutiliza css/articulo1.css -->
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo NutriDesk">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contactos.html">Contacto</a></li>
+          <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+          <li><a href="acercade.html">Acerca de</a></li>
+        </ul>
+      </nav>
+      <div class="busqueda">
+        <input type="text" placeholder="Buscar productos...">
+        <button onclick="alert('Buscando...')">🔍</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="contenedor-articulo">
+    <div class="container">
+      <article class="articulo">
+        <h1>Opinión: ¿Es mejor comer 3 veces o 5 al día?</h1>
+        <img src="Img/Frecuencia.jpg" alt="Comparación de frecuencias de comidas" class="imagen-principal">
+        
+        <p>En esta opinión, analizamos si es mejor comer <strong>3 veces al día</strong> (desayuno, almuerzo, cena) o <strong>5 veces</strong> (incluyendo snacks). Basado en estudios y experiencias, exploramos pros, contras y qué funciona mejor para cada persona.</p>
+        
+        <h2 id="ventajas3">Ventajas de Comer 3 Veces al Día</h2>
+        <ul>
+          <li>Simplicidad: Fácil de planificar y seguir en rutinas ocupadas.</li>
+          <li>Menos tentaciones: Reduce la oportunidad de comer en exceso entre comidas.</li>
+          <li>Mejor digestión: Permite al cuerpo descansar y procesar alimentos completamente.</li>
+          <li>Adecuado para pérdida de peso: Menos comidas pueden ayudar a crear déficit calórico.</li>
+        </ul>
+        
+        <h2 id="ventajas5">Ventajas de Comer 5 Veces al Día</h2>
+        <ol>
+          <li><em>Control del apetito</em>: Snacks evitan picos de hambre y antojos.</li>
+          <li>Estabiliza azúcar en sangre: Previene caídas de energía y mejora concentración.</li>
+          <li>Mejor absorción de nutrientes: Porciones más pequeñas facilitan la digestión.</li>
+          <li>Ideal para atletas: Mantiene energía constante durante entrenamientos intensos.</li>
+        </ol>
+        
+        <img src="Img/Comer.webp" alt="Ejemplo de comidas y snacks diarios" class="imagen-secundaria">
+        
+        <h2 id="factores">Factores a Considerar</h2>
+        <p>No hay una respuesta universal; depende de tu estilo de vida, metas y metabolismo. Estudios muestran que ambos enfoques funcionan si se mantiene un balance calórico. En mi opinión, 5 comidas al día es mejor para la mayoría, especialmente si eres activo o tienes hambre frecuente, pero 3 veces es suficiente si prefieres simplicidad.</p>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Perfil</th>
+              <th>Recomendación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Persona sedentaria</td>
+              <td>3 comidas al día</td>
+            </tr>
+            <tr>
+              <td>Atleta o trabajador activo</td>
+              <td>5 comidas al día</td>
+            </tr>
+            <tr>
+              <td>Con diabetes</td>
+              <td>5 comidas para controlar glucosa</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h2>Consejos Finales</h2>
+        <p>Escucha a tu cuerpo: Si sientes hambre, come. Combina con alimentos nutritivos y evita snacks procesados. Consulta a un nutricionista para personalizar. ¡La clave es la consistencia, no la frecuencia!</p>
+      </article>
+      
+      <!-- BARRA LATERAL -->
+      <aside class="barra-lateral">
+        <h3>Etiquetas</h3>
+        <ul>
+          <li><a href="#ventajas3">Ventajas 3</a></li>
+          <li><a href="#ventajas5">Ventajas 5</a></li>
+          <li><a href="#factores">Factores</a></li>
+        </ul>
+        <h3>Búsqueda</h3>
+        <input type="text" id="busqueda-articulo" placeholder="Buscar en el artículo...">
+      </aside>
+    </div>
+  </main>
+
+  <!-- SECCIÓN DE COMENTARIOS -->
+  <section class="comentarios">
+    <div class="container">
+      <h2>Comentarios</h2>
+      
+      <div class="comentario">
+        <p><strong>Pedro Martínez:</strong> ¡Opinión muy útil! Ahora entiendo mejor mi rutina alimentaria.</p>
+        <small>Publicado el 15 de noviembre de 2023</small>
+      </div>
+      
+      <form class="formulario-comentario">
+        <h3>Deja tu comentario</h3>
+        <input type="text" placeholder="Nombre" required>
+        <textarea placeholder="Escribe tu comentario..." required></textarea>
+        <button type="submit" onclick="alert('¡Gracias por tu comentario! Se ha enviado correctamente.'); this.form.reset();">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 NutriDesk. Todos los derechos reservados.</p>
+      <div class="redes">
+        <a href="https://wa.me/506XXXXXXXX" target="_blank">
+          <img src="img/whatsapp.png" alt="WhatsApp" class="icono-redes">
+        </a>
+        <a href="https://instagram.com/nutridex" target="_blank">
+          <img src="img/instagram.png" alt="Instagram" class="icono-redes">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>

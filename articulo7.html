@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia de NutriDesk - NutriDesk</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/articulo1.css"> <!-- O reutiliza css/articulo1.css -->
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo NutriDesk">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contactos.html">Contacto</a></li>
+          <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+          <li><a href="acercade.html">Acerca de</a></li>
+        </ul>
+      </nav>
+      <div class="busqueda">
+        <input type="text" placeholder="Buscar productos...">
+        <button onclick="alert('Buscando...')">🔍</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="contenedor-articulo">
+    <div class="container">
+      <article class="articulo">
+        <h1>Historia de NutriDesk</h1>
+        <img src="Img/Nutri.jpg" alt="Orígenes de NutriDesk" class="imagen-principal">
+        
+        <p>Descubre la <strong>historia detrás de NutriDesk</strong>, desde sus humildes comienzos hasta convertirse en un referente en nutrición saludable. Una trayectoria de pasión, innovación y compromiso con la salud.</p>
+        
+        <h2 id="origenes">Orígenes de NutriDesk</h2>
+        <p>NutriDesk nació en 2020 con la visión de hacer que la alimentación saludable sea accesible y deliciosa para todos. Nuestra filosofía se basa en la creencia de que la comida no solo nutre el cuerpo, sino que también eleva el espíritu. Desde nuestros inicios en una pequeña cocina, hemos crecido gracias a la pasión por ingredientes frescos y naturales.</p>
+        
+        <h2 id="evolucion">Evolución y Crecimiento</h2>
+        <ol>
+          <li><em>2020-2021</em>: Lanzamiento del blog con artículos básicos y consejos gratuitos.</li>
+          <li>2021: Expansión a redes sociales y colaboración con influencers de salud.</li>
+          <li>2022: Introducción de planes nutricionales personalizados y app móvil.</li>
+          <li>2023: Asociación con clínicas y crecimiento internacional.</li>
+          <li>2024: Más de 100,000 usuarios activos y premios en innovación nutricional.</li>
+        </ol>
+        
+        <img src="Img/Personas.jpg" alt="Evolución de NutriDesk a lo largo de los años" class="imagen-secundaria">
+        
+        <h2 id="logros">Logros y Impacto</h2>
+        <p>NutriDesk ha transformado vidas ayudando a miles a mejorar su salud. Nuestros logros incluyen certificaciones de calidad, testimonios de usuarios y contribuciones a la comunidad, como talleres gratuitos en escuelas.</p>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Año</th>
+              <th>Logro Principal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2021</td>
+              <td>Primer premio en blog de nutrición</td>
+            </tr>
+            <tr>
+              <td>2022</td>
+              <td>100,000 visitas mensuales</td>
+            </tr>
+            <tr>
+              <td>2024</td>
+              <td>Certificación ISO en servicios de salud</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h2>Visión Futura</h2>
+        <p>Miramos al futuro con entusiasmo: expandir a más países, integrar IA para planes personalizados y promover sostenibilidad en la alimentación. ¡Únete a nuestro viaje por una vida más saludable!</p>
+      </article>
+      
+      <!-- BARRA LATERAL -->
+      <aside class="barra-lateral">
+        <h3>Etiquetas</h3>
+        <ul>
+          <li><a href="#origenes">Orígenes</a></li>
+          <li><a href="#evolucion">Evolución</a></li>
+          <li><a href="#logros">Logros</a></li>
+        </ul>
+        <h3>Búsqueda</h3>
+        <input type="text" id="busqueda-articulo" placeholder="Buscar en el artículo...">
+      </aside>
+    </div>
+  </main>
+
+  <!-- SECCIÓN DE COMENTARIOS -->
+  <section class="comentarios">
+    <div class="container">
+      <h2>Comentarios</h2>
+      
+      <div class="comentario">
+        <p><strong>Sofia Ramírez:</strong> ¡Inspiradora historia! Me encanta cómo han crecido.</p>
+        <small>Publicado el 20 de noviembre de 2023</small>
+      </div>
+      
+      <form class="formulario-comentario">
+        <h3>Deja tu comentario</h3>
+        <input type="text" placeholder="Nombre" required>
+        <textarea placeholder="Escribe tu comentario..." required></textarea>
+        <button type="submit" onclick="alert('¡Gracias por tu comentario! Se ha enviado correctamente.'); this.form.reset();">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 NutriDesk. Todos los derechos reservados.</p>
+      <div class="redes">
+        <a href="https://wa.me/506XXXXXXXX" target="_blank">
+          <img src="img/whatsapp.png" alt="WhatsApp" class="icono-redes">
+        </a>
+        <a href="https://instagram.com/nutridex" target="_blank">
+          <img src="img/instagram.png" alt="Instagram" class="icono-redes">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  
+
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - NutriDesk</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/contacto.css"> <!-- CSS mejorado y separado -->
+</head>
+
+<body>
+
+  <!-- HEADER (igual al index, pero con enlaces en minúsculas) -->
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo NutriDesk" />
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a class="active" href="contactos.html">Contacto</a></li>
+          <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+          <li><a href="acercade.html">Acerca de</a></li>
+        </ul>
+      </nav>
+
+      <div class="busqueda">
+        <input type="text" placeholder="Buscar productos..." />
+        <button type="button" onclick="alert('Buscando...')">🔍</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+   <!-- BANNER -->
+    <section class="banner" aria-labelledby="tit-contacto">
+       <h1 id="tit-contacto">📞 ¡Contáctenos!</h1>
+      <p>Contáctenos para resolver sus dudas sobre nuestros planes saludables o condiciones de entrega. Le responderemos a la brevedad.</p>
+    </section>
+
+    <!-- CONTENIDO CONTACTO -->
+    <section class="contacto" aria-label="Formulario y datos de contacto">
+      <div class="contacto-container">
+        <!-- FORMULARIO -->
+        <div class="card">
+          <h2 style="margin-top:0; color:#1F732C;">Formulario de contacto</h2>
+
+          <form id="frmContacto" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input id="nombre" name="nombre" type="text" placeholder="Ej. Ana López" required />
+                <small class="form-help">Requerido</small>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input id="email" name="email" type="email" placeholder="nombre@correo.com" required />
+                <small class="form-help">Usa un correo válido</small>
+              </div>
+
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" name="telefono" type="tel"
+                       placeholder="Ej. 8888-8888"
+                       pattern="[0-9\\-\\s\\+]{8,15}" />
+                <small class="form-help">Opcional (8–15 dígitos)</small>
+              </div>
+
+              <div class="form-group">
+                <label for="asunto">Asunto</label>
+                <select id="asunto" name="asunto" required>
+                  <option value="">Selecciona una opción</option>
+                  <option>Consulta general</option>
+                  <option>Pedido/Reserva</option>
+                  <option>Plan semanal</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+
+              <div class="form-group full">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5"
+                          placeholder="Cuéntanos en qué podemos ayudarte"
+                          required></textarea>
+              </div>
+
+              <div class="form-group full">
+                <label style="display:flex; align-items:center; gap:8px; font-weight:normal;">
+                  <input type="checkbox" id="politica" required />
+                  Acepto la política de privacidad
+                </label>
+              </div>
+            </div>
+
+            <div class="acciones-form">
+              <button type="submit" class="btn-secundario">Enviar mensaje</button>
+              <button type="reset" class="btn-clarito">Limpiar</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- INFO LATERAL -->
+        <aside class="card" aria-label="Información de contacto">
+          <h2 style="margin-top:0; color:#1F732C;">Información</h2>
+
+          <div class="info-item">
+            <h4>📍 Ubicación</h4>
+            <p>Un kilometro suroeste del Aeropuerto Juan Santa Maria, Avenida 10</p>
+          </div>
+
+          <div class="info-item">
+            <h4>📧 Correo</h4>
+            <p><a href="mailto:saludable@nutridesk.com">saludable@nutridesk.com</a></p>
+          </div>
+
+          <div class="info-item">
+            <h4>📞 Teléfono</h4>
+            <p>+506 86885422 </p>
+          </div>
+
+          <div class="info-item">
+            <h4> Horario</h4>
+            <p>Lun–Vie 8:00–18:00 / Sáb 9:00–13:00</p>
+          </div>
+
+          <div class="info-item mapa">
+            <h4>Tu mejor opción</h4>
+            <img src="Img/Delivery.jpg" alt="Tu mejor opción NutriDesk">
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 NutriDesk. Todos los derechos reservados.</p>
+    <div class="redes">
+      <a href="https://wa.me/506XXXXXXXX" target="_blank">
+        <img src="img/whatsapp.png" alt="WhatsApp" class="icono-redes" />
+      </a>
+      <a href="https://instagram.com/nutridex" target="_blank">
+        <img src="img/instagram.png" alt="Instagram" class="icono-redes" />
+      </a>
+    </div>
+  </footer>
+
+  <!-- Validación mínima -->
+  <script>
+    document.getElementById('frmContacto').addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (!this.checkValidity()) {
+        alert('Revisa los campos requeridos.');
+        return;
+      }
+      alert('¡Gracias! Tu mensaje ha sido enviado.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>

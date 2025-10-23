@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consejos para elegir tu snack ideal - NutriDesk</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/articulo1.css"> <!-- O reutiliza css/articulo1.css -->
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo NutriDesk">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contactos.html">Contacto</a></li>
+          <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+          <li><a href="acercade.html">Acerca de</a></li>
+        </ul>
+      </nav>
+      <div class="busqueda">
+        <input type="text" placeholder="Buscar productos...">
+        <button onclick="alert('Buscando...')">🔍</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="contenedor-articulo">
+    <div class="container">
+      <article class="articulo">
+        <h1>Consejos para elegir tu snack ideal</h1>
+        <img src="Img/Barritas.jpg" alt="Snacks saludables preparados" class="imagen-principal">
+        
+        <p>En este artículo, te damos <strong>consejos prácticos</strong> para elegir snacks saludables que satisfagan tu hambre sin comprometer tu nutrición. Aprende a balancear sabor, nutrición y conveniencia.</p>
+        
+        <h2 id="tipos">Tipos de Snacks Saludables</h2>
+        <ul>
+          <li>Frutas frescas como manzanas o plátanos con nueces</li>
+          <li>Yogur griego con granola baja en azúcar</li>
+          <li>Verduras crudas con hummus</li>
+          <li>Barritas de proteínas naturales (sin azúcares añadidos)</li>
+          <li>Frutos secos en porciones pequeñas</li>
+        </ul>
+        
+        <h2 id="elegir">Cómo Elegir tu Snack</h2>
+        <ol>
+          <li><em>Evalúa tus necesidades</em>: ¿Buscas energía rápida o saciedad prolongada?</li>
+          <li>Revisa las etiquetas: Prioriza bajos en azúcar, altos en fibra y proteínas.</li>
+          <li>Considera el tamaño de la porción para evitar excesos.</li>
+          <li>Opta por opciones naturales y evita procesados con aditivos.</li>
+          <li>Prueba combinaciones: Mezcla dulce y salado para mayor satisfacción.</li>
+        </ol>
+        
+        <img src="Img/Semillas.jpg" alt="Ejemplos de snacks saludables" class="imagen-secundaria">
+        
+        <h2 id="beneficios">Beneficios Nutricionales</h2>
+        <p>Elegir snacks inteligentes ayuda a mantener niveles estables de azúcar, mejora la concentración y previene antojos. Un buen snack aporta <u>nutrientes esenciales</u> sin calorías vacías.</p>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo de Snack</th>
+              <th>Beneficio Principal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Frutas con nueces</td>
+              <td>Vitaminas y grasas saludables</td>
+            </tr>
+            <tr>
+              <td>Yogur con granola</td>
+              <td>Proteínas y probióticos</td>
+            </tr>
+            <tr>
+              <td>Verduras con hummus</td>
+              <td>Fibra y minerales</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h2>Consejos Finales</h2>
+        <p>Prepara snacks en casa para controlar los ingredientes. Si tienes restricciones dietéticas, consulta a un nutricionista. ¡Elige sabiamente y disfruta!</p>
+      </article>
+      
+      <!-- BARRA LATERAL -->
+      <aside class="barra-lateral">
+        <h3>Etiquetas</h3>
+        <ul>
+          <li><a href="#tipos">Tipos</a></li>
+          <li><a href="#elegir">Elegir</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+        </ul>
+        <h3>Búsqueda</h3>
+        <input type="text" id="busqueda-articulo" placeholder="Buscar en el artículo...">
+      </aside>
+    </div>
+  </main>
+
+  <!-- SECCIÓN DE COMENTARIOS -->
+  <section class="comentarios">
+    <div class="container">
+      <h2>Comentarios</h2>
+      
+      <div class="comentario">
+        <p><strong>Nahomy Rivera:</strong> ¡Muy útiles estos consejos! Ahora elijo mejor mis snacks.</p>
+        <small>Publicado el 30 de octubre de 2024</small>
+      </div>
+      
+      <form class="formulario-comentario">
+        <h3>Deja tu comentario</h3>
+        <input type="text" placeholder="Nombre" required>
+        <textarea placeholder="Escribe tu comentario..." required></textarea>
+        <button type="submit" onclick="alert('¡Gracias por tu comentario! Se ha enviado correctamente.'); this.form.reset();">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 NutriDesk. Todos los derechos reservados.</p>
+      <div class="redes">
+        <a href="https://wa.me/506XXXXXXXX" target="_blank">
+          <img src="img/whatsapp.png" alt="WhatsApp" class="icono-redes">
+        </a>
+        <a href="https://instagram.com/nutridex" target="_blank">
+          <img src="img/instagram.png" alt="Instagram" class="icono-redes">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+</html>
