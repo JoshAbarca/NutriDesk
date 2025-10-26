@@ -301,7 +301,7 @@ footer .icono-redes:hover {
 /* Responsividad: Para pantallas menores a 768px */
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: row; /* Mantén horizontal, pero ajusta */
+    flex-direction: row; /* Mantén horizontal para que logo y botón estén a la par */
     gap: 15px;
     position: relative; /* Para el menú fijo */
   }
@@ -343,11 +343,6 @@ footer .icono-redes:hover {
     display: none; /* Opcional: oculta la búsqueda en móviles para simplificar */
   }
 
-  /* Header en columna */
-  .header-container {
-    flex-direction: column;
-    gap: 15px;
-  }
   /* Acerca con menos padding y margen */
   .acerca {
     padding: 20px;
