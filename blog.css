@@ -28,10 +28,14 @@ header {
   padding: 15px 0;
 }
 
+/* Contenedor del header y menú centrado */
 .header-container {
+  width: 85%;          /* ancho más compacto */
+  max-width: 1000px;   /* límite de ancho menor */
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; 
   gap: 30px;
 }
 
@@ -39,42 +43,14 @@ header {
   width: 140px;
 }
 
-nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  gap: 18px;
-  padding: 0;
-  margin: 0;
-  flex-wrap: nowrap;
-}
-
-nav ul li a {
-  display: inline-block;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 8px 14px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.2s;
-  white-space: nowrap;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-  background-color: #60A62E;
-  color: #fff;
-  transform: translateY(-2px);
-}
-
-.busqueda {
+/* Barra de búsqueda en el header */
+.header-container .busqueda {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
-.busqueda input {
+.header-container .busqueda input {
   padding: 6px 10px;
   border-radius: 6px;
   border: 1px solid #60A62E;
@@ -84,22 +60,90 @@ nav ul li a.active {
   transition: 0.3s;
 }
 
-.busqueda input:focus {
+.header-container .busqueda input:focus {
   border-color: #438C2E;
   box-shadow: 0 0 5px rgba(67, 140, 46, 0.5);
 }
 
-.busqueda button {
+.header-container .busqueda button {
   padding: 6px 10px;
   border-radius: 6px;
   border: none;
   background-color: #60A62E;
+  color: #fff;
   cursor: pointer;
+  font-size: 0.95rem;
   transition: 0.3s;
 }
 
-.busqueda button:hover {
+.header-container .busqueda button:hover {
   background-color: #438C2E;
+}
+
+/* --- BOTÓN HAMBURGUESA --- */
+.hamburger {
+  display: none; /* Oculto por defecto */
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #F2F2F2;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Animación opcional para el botón (convierte en X cuando checked) */
+#menu-toggle:checked ~ .hamburger .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+#menu-toggle:checked ~ .hamburger .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked ~ .hamburger .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* --- MENÚ CENTRADO Y DISTRIBUIDO --- */
+.nav-container {
+  flex: 1; /* Para que ocupe espacio en desktop */
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around; /* distribuye los links uniformemente */
+  list-style: none;
+  gap: 10px;                    /* espacio mínimo entre links */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;             /* evita que los links bajen de renglón */
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 8px 14px;           /* suficiente padding sin romper el texto */
+  border-radius: 6px;
+  text-align: center;
+  font-weight: bold;
+  color: #F2F2F2;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;          /* evita que los textos largos se dividan */
+  font-size: 1rem;
+}
+
+/* Hover: cuadro verde */
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #60A62E;
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 /* --- CONTENIDO PRINCIPAL (Full-Width, Sin Sidebar) --- */
@@ -332,13 +376,51 @@ footer .icono-redes:hover {
 
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
-  .contenedor-blog {
-    padding: 30px 0; /* Menos padding en móviles */
+  .header-container {
+    flex-direction: row; /* Mantén horizontal, pero ajusta */
+    gap: 15px;
+    position: relative; /* Para el menú fijo */
   }
 
-  .header-container {
+  .hamburger {
+    display: flex; /* Muestra el botón en móviles */
+  }
+
+  .nav-container {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Oculto fuera de la pantalla */
+    width: 100%;
+    height: 100vh;
+    background-color: #1F732C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s ease;
+    z-index: 999;
+  }
+
+  /* Muestra el menú cuando el checkbox está checked */
+  #menu-toggle:checked ~ .nav-container {
+    left: 0;
+  }
+
+  nav ul {
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem;
+    padding: 15px 20px;
+  }
+
+  .busqueda {
+    display: none; /* Opcional: oculta la búsqueda en móviles para simplificar */
+  }
+
+  .contenedor-blog {
+    padding: 30px 0; /* Menos padding en móviles */
   }
 
   nav ul {
