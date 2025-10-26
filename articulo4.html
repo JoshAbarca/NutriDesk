@@ -8,13 +8,25 @@
   <link rel="stylesheet" href="articulo1.css"> 
 </head>
 <body>
+ <!-- HEADER CON LOGO Y MENÚ -->
+<header>
+  <div class="header-container">
+    <div class="logo">
+      <img src="Logo.png" alt="Logo NutriDesk">
+    </div>
 
-  <!-- HEADER -->
-  <header>
-    <div class="container header-container">
-      <div class="logo">
-        <img src="Logo.png" alt="Logo NutriDesk">
-      </div>
+    <!-- Input oculto para el toggle (sin JS) -->
+    <input type="checkbox" id="menu-toggle" style="display: none;">
+
+    <!-- Label que actúa como botón hamburguesa -->
+    <label for="menu-toggle" class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </label>
+
+    <!-- Envuelve el nav en un contenedor para el toggle -->
+    <div class="nav-container">
       <nav>
         <ul>
           <li><a href="index.html">Inicio</a></li>
@@ -25,12 +37,15 @@
           <li><a href="acercaDe.html">Acerca de</a></li>
         </ul>
       </nav>
-      <div class="busqueda">
-        <input type="text" placeholder="Buscar productos...">
-        <button onclick="alert('Buscando...')">🔍</button>
-      </div>
     </div>
-  </header>
+
+    <!-- BARRA DE BÚSQUEDA -->
+    <div class="busqueda">
+      <input type="text" placeholder="Buscar productos...">
+      <button onclick="alert('Buscando...')">🔍</button>
+    </div>
+  </div>
+</header>
 
   <!-- CONTENIDO PRINCIPAL -->
   <main class="contenedor-articulo">
@@ -136,5 +151,6 @@
 
 </body>
 </html>
+
 
 
