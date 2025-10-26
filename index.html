@@ -8,31 +8,44 @@
 </head>
 <body>
 
-  <!-- HEADER CON LOGO Y MENÚ -->
-  <header>
+
+ <!-- HEADER CON LOGO Y MENÚ -->
+<header>
   <div class="header-container">
     <div class="logo">
       <img src="Logo.png" alt="Logo NutriDesk">
     </div>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="Nosotros.html">Nosotros</a></li>
-        <li><a href="Blog.html">Blog</a></li>
-        <li><a href="contactos.html">Contacto</a></li>
-        <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
-        <li><a href="acercaDe.html">Acerca de</a></li>
-      </ul>
-    </nav>
+    <!-- Input oculto para el toggle (sin JS) -->
+    <input type="checkbox" id="menu-toggle" style="display: none;">
 
- <!-- BARRA DE BÚSQUEDA -->
+    <!-- Label que actúa como botón hamburguesa -->
+    <label for="menu-toggle" class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </label>
+
+    <!-- Envuelve el nav en un contenedor para el toggle -->
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="Nosotros.html">Nosotros</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><a href="contactos.html">Contacto</a></li>
+          <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+          <li><a href="acercaDe.html">Acerca de</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- BARRA DE BÚSQUEDA -->
     <div class="busqueda">
       <input type="text" placeholder="Buscar productos...">
       <button onclick="alert('Buscando...')">🔍</button>
     </div>
   </div>
-
 </header>
 
 
@@ -86,6 +99,7 @@
 
 </body>
 </html>
+
 
 
 
